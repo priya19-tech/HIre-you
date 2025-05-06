@@ -1,0 +1,74 @@
+@import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
+
+body {
+  min-height: 100vh;
+  background-color: #94d5d5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 1rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.logic-title {
+  font-size: 2.25rem; /* Tailwind's text-4xl */
+  font-weight: 700;
+  color: #095141; /* Tailwind's text-purple-900 */
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(1, 1fr);
+  max-width: 1000px;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+    background-color: rgb(179, 238, 240); /* dark pink for all cards */
+    border: 2px solid rgb(18, 91, 87);
+    color: rgb(6, 54, 62);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-size: 1.125rem; /* Tailwind's text-lg */
+    font-weight: 600;    /* Tailwind's font-semibold */
+    padding: 2.2rem;     /* Tailwind's p-6 */
+    border-radius: 0.5rem; /* Tailwind's rounded-lg */
+    text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+}
+
+.back-button {
+    background-color: #1f739a;
+    color: white;
+    font-weight: 600;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #5babbd;
+  }
+  
